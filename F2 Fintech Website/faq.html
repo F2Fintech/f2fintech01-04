@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+      body{
+        background-color: white;
+        padding-top: 10px;
+        font-family: system-ui;
+      }
+      .container{
+       
+        width: 100%;
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 3px 0px;
+        background: blue;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 10px;
+      }
+      .faq-wrapper{
+        width: 75%;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="faq-wrapper">
+          <div class="header">
+            <h1>FAQs</h1>
+          </div>
+          <div class="faq-inner">
+            <div class="faq-item">
+              <h3>
+                What is secured and unsecured loans?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                A <b>secured loan</b> is a loan you can take out that’s tied to an asset of yours as security. For example a mortgage is a type of secured loan, and the asset would be the house you take the mortgage out on – when you repay the loan the house is yours, but if you don’t repay then the lender could seize your house.
+               <br/>
+                 An <b>unsecured loan</b> loan isn’t tied to any collateral, and as a result you normally need at least a fair credit score to qualify. There is also often a maximum amount you’ll be allowed to borrow.
+
+
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What can I take out a loan for?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                You can take out a loan for a number of reasons, ranging from home improvements or education to big purchases like buying a car – however it’s unlikely you’ll be approved for a loan to cover you day-to-day costs.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                How much can I borrow?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The amount you’ll be eligible to borrow will depend on your personal circumstances – if you have a poor or limited credit history, you may not be able to borrow as much as someone with a good credit history.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                How long can I take out a loan for?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The length of your loan can vary depending on the type of loan you take out and the provider you choose, but it could be anywhere between a year and ten years. Taking out a loan for a longer period of time may reduce your monthly payments, but you may end up paying more for the loan due to interest payments.
+              </div>
+              <hr>
+            </div>
+           
+            <div class="faq-item">
+              <h3>
+                How do I know if I'm eligible for a loan?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Different lenders and different types of loans will have varying requirements, but in general whether or not you qualify will depend on your personal details and your credit history. However you can always compare loans on MoneySuperMarket – all you need to do is answer a few questions about the loan you want to take out and you’ll be given a tailored list, which you can sort by interest rates and the likelihood of your application being accepted.
+              </div>
+              <hr/>
+              <div class="faq-item">
+                <h3>
+                  How do I apply for a loan?
+                  <span class="faq-plus">&plus;</span>
+                </h3>
+                <div class="faq-body">
+                  You can generally apply for loans by contacting the provider you choose – either by calling through the phone, sending an application form through the post, applying online, or dropping in to their branch (if they have one) to apply in person.
+                </div>
+                <hr/>
+                <div class="faq-item">
+                  <h3>
+                    what if I miss repayments?
+                    <span class="faq-plus">&plus;</span>
+                  </h3>
+                  <div class="faq-body">
+                    Missing repayments can mean you might be fined by your lender, and it could also end any low or zero interest incentives you have. It may even lead to a hike in the interest rate you’ll make future repayments at.
+                  </div>
+                  <hr/>
+                  <div class="faq-item">
+                    <h3>
+                     What is debt consolidation?
+                      <span class="faq-plus">&plus;</span>
+                    </h3>
+                    <div class="faq-body">
+                      Debt consolidation is when you take out a single loan to repay the debts you have with different providers – this way you can pay off the debt with a single monthly repayment, rather than lots of repayments to a variety of lenders.
+                    </div>
+                    <hr/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(".faq-plus").on('click',function(){
+        $(this).parent().parent().find('.faq-body').slideToggle();
+      });
+    </script>
+  </body>
+
+</html>

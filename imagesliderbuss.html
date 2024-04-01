@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .image-slider {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to hide extra images */
+    position: relative; /* Needed for absolute positioning of images */
+  }
+  .image-container {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: none; /* Initially hide all images */
+  }
+  .image-container.active {
+    display: block; /* Display only active image */
+  }
+  .image-container img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto;
+    margin-top: 30px;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  }
+  .navigation-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-buttons button {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-buttons button:hover {
+  background: linear-gradient(to right, #525252, #7a7a7a);
+  transform: translateY(-2px);
+}
+
+</style>
+</head>
+<body>
+
+<div class="image-slider">
+  <div class="image-container active">
+    <img src="./F2 Fintech Website/img/businessloan1.jpg" alt="Business Loan 1">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan2.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan3.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan4.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan5.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan6.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan7.jpg" alt="Business Loan 2">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan8.jpg" alt="Business Loan 4">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan9.jpg" alt="Business Loan 4">
+  </div>
+</div>
+
+<div class="navigation-buttons">
+  <button onclick="prevImage()">prev</button>
+  <button onclick="nextImage()">next</button>
+</div>
+
+<script>
+  // JavaScript to handle image sliding
+  const images = document.querySelectorAll('.image-container');
+  let index = 0;
+  let slideInterval;
+
+  function showImage(indexToShow) {
+    // Hide all images
+    images.forEach(image => {
+      image.classList.remove('active');
+    });
+    // Show the selected image
+    images[indexToShow].classList.add('active');
+  }
+
+  function nextImage() {
+    index++;
+    if (index >= images.length) {
+      index = 0;
+    }
+    showImage(index);
+  }
+
+  function prevImage() {
+    index--;
+    if (index < 0) {
+      index = images.length - 1;
+    }
+    showImage(index);
+  }
+
+  // Set interval for automatic sliding
+  slideInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
+
+  // Pause automatic sliding on mouseover
+  document.querySelector('.image-slider').addEventListener('mouseover', () => {
+    clearInterval(slideInterval);
+  });
+
+  // Resume automatic sliding on mouseout
+  document.querySelector('.image-slider').addEventListener('mouseout', () => {
+    slideInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
+  });
+</script>
+
+</body>
+</html>

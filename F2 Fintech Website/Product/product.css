@@ -1,0 +1,11 @@
+@media (min-width: 992px) {
+  .comparison::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      top: 56px;
+      bottom: 20px;
+      left: 50%;
+      background: #DDDDDD;
+  }
+}

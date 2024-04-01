@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .image-slider {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to hide extra images */
+    position: relative; /* Needed for absolute positioning of images */
+  }
+  .image-container {
+    text-align: center;
+  }
+  .image-container img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+    display: block; /* Remove extra space below images */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  .next-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .next-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div id="first-slider" class="image-slider active">
+  <div class="image-container active">
+    <img src="./F2 Fintech Website/img/businessloan1.jpg" alt="Business Loan 1">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan2.jpg" alt="Business Loan 2">
+  </div>
+
+  
+</div>
+
+<div id="second-slider" class="image-slider">
+  <div class="image-container active">
+    <img src="./F2 Fintech Website/img/businessloan3.jpg" alt="Business Loan 3">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan4.jpg" alt="Business Loan 4">
+  </div>
+  <div class="image-container">
+    <img src="./F2 Fintech Website/img/businessloan4.jpg" alt="Business Loan 4">
+  </div>
+  
+
+  <!-- <button class="next-button" onclick="nextSlider()">Next</button> -->
+</div>
+
+
+<script>
+  let currentSliderIndex = 0;
+  const sliders = document.querySelectorAll('.image-slider');
+
+  function nextSlider() {
+    sliders[currentSliderIndex].classList.remove('active');
+    currentSliderIndex++;
+    if (currentSliderIndex >= sliders.length) {
+      currentSliderIndex = 0;
+    }
+    sliders[currentSliderIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>

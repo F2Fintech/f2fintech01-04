@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; 
+  background-color: #000; 
+  color: #fff; /* Assuming white text */
+}
+hr {
+  color: white;
+  border: 0;
+  height: 0;
+  width: 90%; 
+  border-top: 0.5px solid #8c8c8c;
+}
+
+.heading{
+  color:#8c8c8c;
+}
+p {
+  font-size: 16px; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+p:first-child {
+  font-weight: bold; /* Make the first paragraph bold */
+}
+
+p:nth-child(2n) {
+  color: white; /* Change color for even numbered paragraphs */
+}
+
+
+
+.footer{
+  margin-left: 100px;
+}
+.content1 {
+  display: flex; /* Display its children in a row */
+  justify-content: space-between; /* Distribute space between the children */
+}
+
+.services {
+  width: 30%; /* Adjust width as needed */
+  display: inline-block; /* Display inline */
+  vertical-align: top; /* Align to the top */
+}
+
+footer {
+  padding: 1rem 0;
+}
+.year{
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 60px;
+  color: #424242;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; 
+  padding: 0 1rem;
+  margin-left: 80%;
+  margin-bottom: -5%;
+
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 30%;
+  text-align: center;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem; /* Adjust the spacing between links as needed */
+  font-size: 0.875rem;
+  font-size: 15px;
+  line-height: 1.5; 
+  text-align: right;
+}
+
+.footer-link:last-child {
+  margin-right: 0;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* .footer-social-icons {
+  display: flex;
+} */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* You can add additional styling like background-color or padding here */
+}
+.social{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 5%;
+ 
+
+}
+.social1{
+  display: flex;
+  
+  align-items: flex-start;
+  margin-left: 5%;
+}
+.english{
+  margin-top: 1%;
+}
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 1.5rem; 
+ 
+}
+.social .footer-social-icons {
+  display: flex;
+  /* Additional styling for the social icons container if needed */
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem; /* Adjust based on your design */
+  padding-top: 1rem; /* Adjust based on your design */
+  border-top: 1px solid #424242; /* Adjust color as needed */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-social-icons {
+    margin-top: 1rem;
+  }
+}
+
+.custom-link {
+  color: white; /* Normal link color */
+}

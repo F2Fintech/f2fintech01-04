@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
+    <meta name="author" content="web-themes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>Logo slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="./logoslider.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ 
+    <div class="logo_wrapper">
+        <div class="container">
+            <div class="associate">
+                <h1>Our associates</h1>
+
+            <div class="owl-carousel logo_active">
+                <img class="img-fluid" src="./img/logo-bajaj.jpg" alt="logo">
+                <img class="img-fluid" src="./img/chola.webp" alt="logo">
+                <img class="img-fluid" src="./img/hdfc.jpg" alt="logo">
+                <img class="img-fluid" src="./img/godrej.jpg" alt="logo">
+                <img class="img-fluid" src="./img/axis.jpeg" alt="logo">
+                <img class="img-fluid" src="./img/l & t.webp" alt="logo">
+                <img class="img-fluid" src="./img/icic.png" alt="logo">
+                <img class="img-fluid" src="./img/adityabirla.jpg" alt="logo">
+                <img class="img-fluid" src="./img/kotak2.jpg" alt="logo">
+                <img class="img-fluid" src="./img/lemnding.png" alt="logo">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        
+        //07. testimonial Slider Initialize
+        function logo_carouselInit() {
+            $('.owl-carousel.logo_active').owlCarousel({
+                dots: false,
+                loop: true,
+                margin: 30,
+                stagePadding: 2,
+                smartSpeed: 1000,
+                autoplay: true,
+                autoplayTimeout: 1500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    576: {
+                        items: 3,
+                    },
+                    768: {
+                        items: 4,
+                    },
+                    992: {
+                        items: 5
+                    }
+                }
+            });
+        }
+        logo_carouselInit();
+
+    </script>
+</body>
+</html>
